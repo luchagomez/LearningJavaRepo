@@ -20,7 +20,7 @@ public class Exercise1 {
         scanner.close();
 
         //4. Print the sentence
-        System.out.println("On a " + adjective + " "winte + season + " day, I drink a minimum of " + number + " cups of coffee");
+        System.out.println("On a " + adjective + " "+ season + " day, I drink a minimum of " + number + " cups of coffee");
     }
 
 }
