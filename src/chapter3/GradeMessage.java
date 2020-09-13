@@ -10,6 +10,8 @@ public class GradeMessage {
         Scanner scanner = new Scanner(System.in);
         String grade = scanner.next();
 
+        scanner.close();
+
         String message;
 
         switch (grade) {
