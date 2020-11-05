@@ -3,7 +3,7 @@ package chapter6;
 import java.util.Scanner;
 /*
    - main needs to be static, because that's how java is build
-   - However, ll of our other things don't necessarily have to be static.
+   - However, all of our other things don't necessarily have to be static.
    - And now that we've talked about classes and objects, we can talk a little bit more
    about static.
    - Static is used when you don't want to create a new instance of that class but yet you want
@@ -16,6 +16,7 @@ import java.util.Scanner;
    - If we don't want to use static and we want to keep state, then what we would need to do is create an instance
    and then call the methods.  This is why we instantiated the class HomeAreaCalculatorRedo and now we can use
    getRoom method because this method is not static.
+   In Java a default constructor is always defined implicit.
  */
 
 public class HomeAreaCalculatorRedo {
