@@ -1,27 +1,27 @@
 package chapter6;
 
-public class PhoneBillCalculator{
+public class PhoneBill {
 
     private int id;
     private double baseCost;
     private int allottedMinutes;
     private int minutedUsed;
 
-    public PhoneBillCalculator () {
+    public PhoneBill() {
         id= 0;
         baseCost = 50.00;
         allottedMinutes = 300;
         minutedUsed = 300;
     }
 
-    public PhoneBillCalculator (int id) {
+    public PhoneBill(int id) {
         this.id= id;
         baseCost = 50.00;
         allottedMinutes = 300;
         minutedUsed = 300;
     }
 
-    public PhoneBillCalculator (int id, double baseCost, int allottedMinutes, int minutedUsed){
+    public PhoneBill(int id, double baseCost, int allottedMinutes, int minutedUsed){
         this.id = id;
         this.baseCost = baseCost;
         this.allottedMinutes = allottedMinutes;
@@ -48,16 +48,16 @@ public class PhoneBillCalculator{
         return allottedMinutes;
     }
 
-    public void setAllottedMinutes(int allottedMinutes){
-        this.allottedMinutes = allottedMinutes;
+    public void setAllottedMinutes(int minutes){
+        this.allottedMinutes = minutes;
     }
 
     public int getMinutedUsed(){
         return minutedUsed;
     }
 
-    public void setMinutedUsed(int minutedUsed){
-        this.minutedUsed = minutedUsed;
+    public void setMinutedUsed(int minutes){
+        this.minutedUsed = minutes;
     }
 
     public double calculateOverage (){
@@ -66,7 +66,7 @@ public class PhoneBillCalculator{
         }
         double overageRate = 0.25;
         double overageMinutes = minutedUsed - allottedMinutes;
-        return overageMinutes*overageRate;
+        return overageMinutes * overageRate;
     }
 
     public double calculateTax (){
@@ -78,7 +78,7 @@ public class PhoneBillCalculator{
         return baseCost + calculateOverage() + calculateTax();
     }
 
-    public void notifyBillDetails{
+    public void notifyBillDetails(){
         System.out.println("Phone Bill Statement");
         System.out.println("ID: " + id);
         System.out.println("Base Rate: $" + baseCost);
@@ -86,5 +86,4 @@ public class PhoneBillCalculator{
         System.out.println("Tax: $" + String.format("%.2f", calculateTax()));
         System.out.println("Total: $" + String.format("%.2f", calculateTotal()));
     }
-}
 }
